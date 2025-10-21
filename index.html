@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Circular Closet — Dresses</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Parisienne&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --cc-cream:#fffaf8;
+      --cc-pink:#fbe3ed;
+      --cc-rose:#eab7c4;
+      --cc-dust:#8b6070;
+      --cc-ink:#5a4048;
+      --cc-mist:#fdf9f7;
+      --shadow:0 10px 30px rgba(90,64,72,.08);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:'Inter',sans-serif;
+      background:linear-gradient(180deg,var(--cc-cream),var(--cc-mist));
+      color:var(--cc-ink);
+      border:25px solid transparent;
+      border-image: url('https://www.transparenttextures.com/patterns/flowers.png') 30 round;
+      border-radius:20px;
+    }
+    header{background:linear-gradient(90deg,var(--cc-rose),var(--cc-pink));color:var(--cc-ink);text-align:center;padding:.6rem;font-weight:600;}
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;}
+    .brand{font-family:'Parisienne',cursive;font-size:2rem;color:var(--cc-dust);} 
+    .nav-links a{color:var(--cc-ink);margin:0 10px;text-decoration:none;font-weight:500;}
+    .btn{border:none;padding:.6rem 1rem;border-radius:999px;font-weight:600;cursor:pointer;transition:all .2s ease;}
+    .btn-primary{background:var(--cc-dust);color:#fff;}
+    .btn-primary:hover{background:var(--cc-rose);} 
+
+    .hero{position:relative;margin:2rem auto;max-width:1100px;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);} 
+    .hero picture, .hero img{display:block;width:100%;height:auto;object-fit:cover;object-position:center top} 
+    .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 70%, transparent 20%, rgba(255,255,255,.25) 60%, rgba(255,255,255,.6) 100%);} 
+    .hero-text{position:absolute;bottom:2rem;left:2rem;color:#3a2e35;max-width:620px;background:rgba(255,255,255,0.82);padding:1rem 1.5rem;border-radius:12px;backdrop-filter:blur(5px);} 
+    .hero-text h1{font-family:'Playfair Display',serif;font-size:2.2rem;margin-bottom:.5rem;color:var(--cc-ink);} 
+    .hero-text p{font-size:1rem;line-height:1.6;color:var(--cc-ink);} 
+
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;max-width:1100px;margin:2rem auto;padding:0 2rem;} 
+    .card{background:#fff;border-radius:16px;box-shadow:var(--shadow);overflow:hidden;transition:transform .2s ease;position:relative;} 
+    .card:hover{transform:translateY(-5px);} 
+    .card .media{position:relative;overflow:hidden;height:320px;background:linear-gradient(180deg, #fff, #f7e9ef);} 
+    .card img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02);} 
+    .card .veil{position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 70%, transparent 40%, rgba(255,255,255,.45) 100%);pointer-events:none;} 
+    .card-content{padding:1rem;} 
+    .card-content h3{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:.3rem;color:var(--cc-dust);} 
+    .price{font-weight:700;color:var(--cc-ink);} 
+    footer{text-align:center;padding:2rem 1rem;background:var(--cc-cream);color:var(--cc-dust);font-size:.95rem;} 
+  </style>
+</head>
+<body>
+  <header>Free carbon-neutral shipping over $99 • Easy returns • Loved, repaired & re-loved</header>
+  <nav>
+    <div class="brand">Circular Closet</div>
+    <div class="nav-links">
+      <a href="#">Dresses</a>
+      <a href="#">Tops</a>
+      <a href="#">Skirts</a>
+      <a href="#">Accessories</a>
+    </div>
+    <button class="btn btn-primary">Bag (0)</button>
+  </nav>
+
+  <section class="hero">
+    <picture>
+      <img id="hero-img" referrerpolicy="no-referrer" alt="Romantic dress collection"/>
+    </picture>
+    <div class="hero-text">
+      <h1>Dream In Lace</h1>
+      <p>Romantic silhouettes and pastel hues — curated vintage-inspired dresses, reimagined for a new era.</p>
+    </div>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <div class="media">
+        <img class="romantic" id="card-1" referrerpolicy="no-referrer" alt="Rosalie Floral Maxi"/>
+        <div class="veil"></div>
+      </div>
+      <div class="card-content">
+        <h3>Rosalie Floral Maxi</h3>
+        <div class="price">$158</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">
+        <img class="romantic" id="card-2" referrerpolicy="no-referrer" alt="Claudette Lace Midi"/>
+        <div class="veil"></div>
+      </div>
+      <div class="card-content">
+        <h3>Claudette Lace Midi</h3>
+        <div class="price">$178</div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="media">
+        <img class="romantic" id="card-3" referrerpolicy="no-referrer" alt="Coquette Bow Mini"/>
+        <div class="veil"></div>
+      </div>
+      <div class="card-content">
+        <h3>Coquette Bow Mini</h3>
+        <div class="price">$142</div>
+      </div>
+    </article>
+  </section>
+
+  <footer>© 2025 Circular Closet — Designed with love and lace.</footer>
+
+  <script>
+    const FALLBACKS = {
+      hero: [
+        'https://images.unsplash.com/photo-1503408024948-0a3e1b2b519c?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1591774921149-70c37a3fe407?auto=format&fit=crop&w=1600&q=80',
+        'https://images.unsplash.com/photo-1613424935149-c8efd5c41e91?auto=format&fit=crop&w=1600&q=80'
+      ],
+      card1: [
+        'https://images.unsplash.com/photo-1591774921149-70c37a3fe407?auto=format&fit=crop&w=1400&q=80',
+        'https://images.unsplash.com/photo-1503408024948-0a3e1b2b519c?auto=format&fit=crop&w=1400&q=80',
+        'https://images.unsplash.com/photo-1613424935149-c8efd5c41e91?auto=format&fit=crop&w=1400&q=80'
+      ],
+      card2: [
+        'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=1400&q=80',
+        'https://images.unsplash.com/photo-1550928431-ee0ec6db30d3?auto=format&fit=crop&w=1400&q=80',
+        'https://images.unsplash.com/photo-1609741873312-7ce5ae7c56b4?auto=format&fit=crop&w=1400&q=80'
+      ],
+      card3: [
+        'https://images.unsplash.com/photo-1520975846000-23b89f1c50dc?auto=format&fit=crop&w=1400&q=80',
+        'https://images.unsplash.com/photo-1551487605-d876deb6b2ff?auto=format&fit=crop&w=1400&q=80',
+        'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1400&q=80'
+      ]
+    };
+
+    function loadWithFallback(imgEl, urls){
+      const tryLoad = (i=0)=>{
+        if(i>=urls.length){
+          imgEl.src = 'https://images.unsplash.com/photo-1520975846000-23b89f1c50dc?auto=format&fit=crop&w=1400&q=80';
+          return;
+        }
+        const test = new Image();
+        test.referrerPolicy = 'no-referrer';
+        test.onload = ()=>{ imgEl.src = urls[i]; };
+        test.onerror = ()=>{ tryLoad(i+1); };
+        test.src = urls[i];
+      };
+      tryLoad(0);
+    }
+
+    loadWithFallback(document.getElementById('hero-img'), FALLBACKS.hero);
+    loadWithFallback(document.getElementById('card-1'), FALLBACKS.card1);
+    loadWithFallback(document.getElementById('card-2'), FALLBACKS.card2);
+    loadWithFallback(document.getElementById('card-3'), FALLBACKS.card3);
+  </script>
+</body>
+</html>
